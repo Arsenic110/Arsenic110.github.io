@@ -10,8 +10,7 @@ body
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 98vw;
-    height: 98vh;
+
     overflow-x: hidden;
     scrollbar-width: none;
     perspective: 8px;
@@ -22,8 +21,6 @@ body
 {
     position: absolute;
     transform-origin: 0 50%;
-    width: 100vw;
-    height: 300vh;
 
     image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
     image-rendering: -moz-crisp-edges;          /* Firefox                        */
@@ -37,10 +34,9 @@ body
 #background-image 
 {
     background-repeat: repeat-y;
-    margin-left: -300px;
     transform: translateZ(-6px) scale(5);
     background-image: url("https://cdn.discordapp.com/attachments/532292600477122562/808030510802665542/background_cascade_stars_0.png");
-    z-index: 1;
+    z-index: -4;
     
 }
 
@@ -49,8 +45,7 @@ body
     background-repeat: repeat;
     transform: translateZ(-3px) ;
     background: transparent url("https://cdn.discordapp.com/attachments/532292600477122562/808045868493176872/starmap-medium.png");
-    height: 300vh;
-    z-index: 2;
+    z-index: -3;
 }
 
 #foreground-image 
@@ -58,14 +53,31 @@ body
     background-repeat: repeat;
     transform: translateZ(0px) ;
     background: transparent url("https://cdn.discordapp.com/attachments/532292600477122562/808045668286332946/starmap-tiny.png");
-    height: 300vh;
-    z-index: 3;
+    z-index: -2;
 }
 
 #text
 {
-    width: 70%;
     height: 400px;
-    background-color: white;
-    z-index: 4;
+    z-index: -1;
+}
+
+#header
+{
+    width:100%;
+    height: 5rem;
+
+}
+
+.container
+{
+    display: block;
+    position:relative;
+    min-width: 70%;
+
+}
+
+.container-fill
+{
+    width:100%;
 }
