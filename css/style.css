@@ -1,83 +1,192 @@
-body
+:root
 {
-    background-color: #000011;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Verdana, sans-serif; 
+    font-size: 1.3rem;
+    background-color:#322f31;
+    color:#fcfbf6;
+
+    width: 100%;
+    height: 100%;
 }
-/* Parallax Styles */
-.parallax-container 
+
+pre
 {
-    -webkit-overflow-scrolling: touch;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0px;
+    font-weight: 12px;
+}
+
+p
+{
+    font-size: 1.3rem;
+    font-weight: 2;
+}
+
+.flex-container
+{
+    border-radius:3rem;
+    padding:1.7rem;
+    margin:1rem;
+
+    background-color:#474747;
+
+    display:flex;
+
+    flex-flow: row wrap;
+
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    animation-name: flow-from-left;
+    animation-duration: 0.5s;
+
+    gap: 0.2rem;
+}
+
+.undercard
+{
+    animation-name: flow-from-left;
+    animation-duration: 0.5s;
+}
+
+.flex-member
+{
+    border: 0rem solid #322f31;
+    border-radius: 3rem;
+
+    background-color: #322f31;
+
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.flex-break
+{
+    flex-basis: 100%;
+    height:0;
+}
+
+.flex-pfp
+{
+
+    animation-name: flow-from-left-roll;
+    animation-duration: 1.5s;
+
+    border: 1rem solid #322f31;
+
     position: relative;
 
-    overflow-x: hidden;
-    scrollbar-width: none;
-    perspective: 8px;
-    perspective-origin: 0%;
-    
-}
-.image 
-{
-    position: absolute;
-    transform-origin: 0 50%;
+    border-radius: 50%;
+    overflow: hidden;
 
-    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-    image-rendering: -moz-crisp-edges;          /* Firefox                        */
-    image-rendering: -o-crisp-edges;            /* Opera                          */
-    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-    image-rendering: pixelated;                 /* Chrome */
-    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
-}
+    padding: 0;
 
-#background-image 
+    width: 15em;
+    height: 15em;
+}
+.flex-pfp img
 {
-    background-repeat: repeat-y;
-    transform: translateZ(-6px) scale(5);
-    background-image: url("https://cdn.discordapp.com/attachments/532292600477122562/808030510802665542/background_cascade_stars_0.png");
-    z-index: -4;
-    
+    position: inherit;
+
+    max-width: 105%;
+    width: 105%;
+    height: 105%;
+    left: -5%;
+    top: -5%;
+    z-index: 2;
+
+    overflow: hidden;
 }
 
-#middle-image 
+.flex-title
 {
-    background-repeat: repeat;
-    transform: translateZ(-3px) ;
-    background: transparent url("https://cdn.discordapp.com/attachments/532292600477122562/808045868493176872/starmap-medium.png");
-    z-index: -3;
+    animation-name: flow-from-left;
+    animation-duration: 0.9s;
+
+    border: 1rem solid #322f31;
+    flex-basis: 30rem;
+} 
+
+.flex-title h1 
+{
+    position: relative;
+    top:20%;
 }
 
-#foreground-image 
+.flex-text
 {
-    background-repeat: repeat;
-    transform: translateZ(0px) ;
-    background: transparent url("https://cdn.discordapp.com/attachments/532292600477122562/808045668286332946/starmap-tiny.png");
-    z-index: -2;
+    flex-grow: 3;
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    animation-name: flow-from-left;
+    animation-duration: 0.9s;
 }
 
-#text
+.flex-link
 {
-    height: 400px;
-    z-index: -1;
+    flex-grow: 3;
+    animation-name: flow-from-left-fast;
+
+    transition: all 0.5s ease;
+
+    min-width: 8rem;
+
+    text-align: center;
+}
+.flex-link p
+{
+    margin: 10% 0;
+}
+.flex-link:hover
+{
+    transform: scale(1.1);
+    background-color: #999999;
 }
 
-#header
+#title-name
 {
-    width:100%;
-    height: 5rem;
+    font-size: 2.6rem;
+    font-weight: 100;
 
+    display: flex;
+    justify-content: center;
+
+    white-space: pre;
 }
 
-.container
+@keyframes flow-from-left 
 {
-    display: block;
-    position:relative;
-    min-width: 70%;
-
+    from 
+    {
+        transform: translate(-100%, 0);
+    }
+    to
+    {
+        transform: translate(0, 0);
+    }
 }
 
-.container-fill
+@keyframes flow-from-left-fast 
 {
-    width:100%;
+    from 
+    {
+        transform: translate(-200%, 0);
+    }
+    to
+    {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes flow-from-left-roll
+{
+    from 
+    {
+        transform: translate(-100%, 0) rotate(180deg);
+    }
+    to 
+    {
+        transform: translate(0, 0) rotate(360deg);
+    }
 }
