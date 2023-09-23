@@ -7,6 +7,8 @@
 
     width: 100%;
     height: 100%;
+
+    transition: all 0.5s ease;
 }
 
 pre
@@ -20,6 +22,63 @@ p
     font-size: 1.3rem;
     font-weight: 2;
 }
+
+a
+{
+    position: relative;
+
+    font-size: 1.3rem;
+    font-weight: 2;
+
+    text-decoration: none;
+    color:#fcfbf6;
+}
+a:hover
+{
+    color:#b5f19c;
+}
+a::before 
+{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #b5f19c;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+a:hover::before 
+{
+    transform: scaleX(1);
+}
+  
+textarea, .animation-white
+{
+    font-size: 1.3rem;
+    font-weight: 2;
+
+    background-color: #fcfbf6;
+    border: 1rem solid #fcfbf6;
+    border-radius: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Verdana, sans-serif; 
+
+    outline: none;
+
+    padding: 3rem;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    
+    resize: none;
+    height: 60vh;
+    width: 50vw;
+}
+  
+
 
 .flex-container
 {
@@ -36,11 +95,16 @@ p
     justify-content: flex-start;
     align-content: flex-start;
 
-    animation-name: flow-from-left;
-    animation-duration: 0.5s;
-
     gap: 0.2rem;
 }
+
+.flex-flow-from-left
+{
+    animation-name: flow-from-left;
+    animation-duration: 0.5s;
+}
+
+
 
 .undercard
 {
@@ -114,19 +178,24 @@ p
 
 .flex-text
 {
-    flex-grow: 3;
+    display: inline;
+
+    width: 60vw;
 
     padding-left: 3rem;
     padding-right: 3rem;
 
     animation-name: flow-from-left;
     animation-duration: 0.9s;
+
+    float: right;
 }
 
 .flex-link
 {
     flex-grow: 3;
     animation-name: flow-from-left-fast;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Verdana, sans-serif; 
 
     transition: all 0.5s ease;
 
@@ -143,6 +212,57 @@ p
     transform: scale(1.1);
     background-color: #999999;
 }
+
+.display-none
+{
+    display:none !important;
+}
+
+.hide
+{
+    z-index: -10;
+}
+
+.suggestions-container
+{
+    border-radius:3rem;
+    padding:1.7rem;
+    margin:1rem;
+
+    background-color:#474747;
+
+    display:flex;
+
+    flex-flow: row wrap;
+
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    gap: 0.2rem;
+}
+
+.animation-white
+{
+    position: absolute;
+}
+
+.animation-white-animate
+{
+    animation-name: go-suggestion;
+    animation-duration: 4s;
+}
+
+.shredder
+{
+    width: 16vw;
+    height: 45vh;
+    z-index: 20; 
+    position:absolute;
+
+    left: 67.9vw;
+    top: 130vh;
+}
+
 
 #title-name
 {
@@ -167,6 +287,18 @@ p
     }
 }
 
+@keyframes flow-to-left
+{
+    from 
+    {
+        transform: translate(0, 0);
+    }
+    to
+    {
+        transform: translate(-110%, 0);
+    }
+}
+
 @keyframes flow-from-left-fast 
 {
     from 
@@ -179,14 +311,36 @@ p
     }
 }
 
-@keyframes flow-from-left-roll
+@keyframes go-suggestion
 {
-    from 
+    0%
     {
-        transform: translate(-100%, 0) rotate(180deg);
+        height: 60vh;
+        width: 50vw;
+
+        left: 3vw;
+        top: 90vh;
     }
-    to 
+    15%
     {
-        transform: translate(0, 0) rotate(360deg);
+        height: 4vh;
+        width: 2vw;
     }
+    30%
+    {
+        height: 4vh;
+        width: 2vw;
+
+        left: 70.5vw;
+        top: 117vh;
+    }
+    100%
+    {
+        height: 4vh;
+        width: 2vw;
+
+        left: 70.5vw;
+        top: 150vh;
+    }
+
 }
