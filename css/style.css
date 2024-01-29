@@ -25,6 +25,15 @@ p
 
 a
 {
+    font-size: 1.3rem;
+    font-weight: 2;
+
+    text-decoration: none;
+    color:#fcfbf6;
+}
+
+.link
+{
     position: relative;
 
     font-size: 1.3rem;
@@ -33,11 +42,11 @@ a
     text-decoration: none;
     color:#fcfbf6;
 }
-a:hover
+.link:hover
 {
     color:#b5f19c;
 }
-a::before 
+.link::before 
 {
     content: "";
     position: absolute;
@@ -50,7 +59,7 @@ a::before
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
-a:hover::before 
+.link:hover::before 
 {
     transform: scaleX(1);
 }
@@ -169,6 +178,23 @@ textarea, .animation-white
     border: 1rem solid #322f31;
     flex-basis: 30rem;
 } 
+.flex-sona-title
+{
+    animation-name: flow-from-left;
+    animation-duration: 0.9s;
+    flex-basis: 20rem;
+    height: fit-content;
+} 
+.flex-sona-text
+{
+    display: block;
+    height: fit-content;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    animation-name: flow-from-left;
+    animation-duration: 0.9s;
+} 
 
 .flex-title h1 
 {
@@ -180,7 +206,7 @@ textarea, .animation-white
 {
     display: inline;
 
-    width: 60vw;
+    max-width: 55vw;
 
     padding-left: 3rem;
     padding-right: 3rem;
@@ -194,7 +220,7 @@ textarea, .animation-white
 .flex-link
 {
     flex-grow: 3;
-    animation-name: flow-from-left-fast;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Verdana, sans-serif; 
 
     transition: all 0.5s ease;
@@ -202,6 +228,15 @@ textarea, .animation-white
     min-width: 8rem;
 
     text-align: center;
+}
+.flex-link-left
+{
+    animation-name: flow-from-left-fast;
+}
+.flex-link-right
+{
+    animation-name: flow-from-right-fast;
+    
 }
 .flex-link p
 {
@@ -304,6 +339,18 @@ textarea, .animation-white
     from 
     {
         transform: translate(-200%, 0);
+    }
+    to
+    {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes flow-from-right-fast 
+{
+    from 
+    {
+        transform: translate(-1000%, 0);
     }
     to
     {
