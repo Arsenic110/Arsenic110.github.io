@@ -192,6 +192,8 @@ textarea, .animation-white
     padding-left: 3rem;
     padding-right: 3rem;
 
+    width: 60vw;
+
     animation-name: flow-from-left;
     animation-duration: 0.9s;
 } 
