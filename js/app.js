@@ -14,14 +14,12 @@ window.onload = () =>
 {
     let rainbows = [...document.getElementsByClassName("rainbow")];
 
-    console.log(rainbows);
-
-    if(rainbows.length)
+    if(rainbows.length > 1)
         rainbows.forEach(e => 
         {
             e.innerHTML = getNextColor(e.innerHTML);
         });
-    else
+    else if (rainbows.length)
         rainbows.innerHTML = getNextColor(rainbows.innerHTML);
 
 
@@ -49,45 +47,4 @@ function getNextColor(txt, global)
     });
 
     return re;
-}
-
-function link(text)
-{
-    window.location.href = text;
-}
-
-function activateSuggestions()
-{
-    let suggestionsContainer = document.getElementsByClassName("suggestions-container")[0];
-    suggestionsContainer.classList.remove("display-none");
-
-    suggestionsContainer.scrollIntoView({behavior: 'smooth'});
-
-    console.log("active!");
-}
-
-function sendSuggestion()
-{
-    console.log("sending");
-
-    let suggestionsContainer = document.getElementById("sugg");
-    suggestionsContainer.classList.add("hide");
-
-    let animationWhite = document.getElementsByClassName("animation-white")[0];
-    animationWhite.classList.remove("display-none");
-    animationWhite.classList.add("animation-white-animate");
-
-    setTimeout(resetSuggestion, 3600);
-}
-
-function resetSuggestion()
-{
-    console.log("sending");
-
-    document.getElementsByClassName("flex-container")[0].scrollIntoView({behavior: 'smooth'});
-
-    setTimeout(() => {document.getElementsByClassName("suggestions-container")[0].classList.add("display-none")}, 300);
-
-    setTimeout(() => {let sugg = document.getElementById("sugg"); sugg.classList.remove("hide"); let animationWhite = document.getElementsByClassName("animation-white")[0]; animationWhite.classList.add("display-none"); animationWhite.classList.remove("animation-white-animate");}, 600);
-
 }

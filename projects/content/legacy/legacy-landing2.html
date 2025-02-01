@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Arsen.icu</title>
+
+    <meta property="og:title" content="Arsen.icu" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arsen.icu" />
+    <meta property="og:image" content="https://arsen.icu/res/keith.png" />
+
+    <meta property="og:description" content="Arsenicu's website!" />
+    <meta name="theme-color" content="#00CCFF">
+</head>
+
+<body>
+    <div class="flex-container flex-flow-from-left">
+        <div class=" undercard">
+
+        </div>
+
+        <div class="flex-member flex-pfp">
+            <img src="res/keith.png" alt="pfp">
+            <img src="res/pastel-rainbow.png" style="transform:translate(0px, -100%)  rotate(45deg); z-index: 1;" alt="pfp">
+        </div>
+        <div class="flex-member flex-title">
+            <h1>
+                <span id="title-name">Hi, I'm <span class="rainbow">Arsenicu</span></span>
+            </h1>
+        </div>
+
+        <div class="flex-break"></div>
+
+        <div class="flex-container" style="margin:0; padding: 0;">
+            <div class="">
+                <a href="https://bsky.app/profile/arsen.icu"><div class="flex-member flex-link flex-link-left" style="animation-duration: 1s;">
+                    <p><img style="top:3px; position:relative;" src="res/bsky.svg"/></img> BlueSky</p>
+                </div></a>
+                <a href="https://github.com/Arsenic110"><div class="flex-member flex-link flex-link-left" style="animation-duration: 1.5s;">
+                    <p><img style="top:3px; position:relative;" src="res/gh.svg"/></img> GitHub</p>
+                </div></a>
+                <a href="https://toyhou.se/Arsenicu"><div class="flex-member flex-link flex-link-left" style="animation-duration: 2s;">
+                    <p><img src="res/th.svg" style="top:5px; position:relative;"></img> Toyhouse</p>
+                </div></a>
+            </div>
+            <div class="flex-member flex-text">
+                <p>VRChat nerd, Blender Bunny<span style="font-size: 8px; top: -9pt; position: relative;">TM</span>, minuscule amounts of programming</p>
+                <p>Any issues with the website, please be advised that everything works on my machine, so it's a you problem.</p>
+                <p>Please send suggestions and feedback using the form, please <a class="link" onclick="activateSuggestions()">click here!</a></p>
+            </div>
+            <a href="OC/OC.html"><div class="flex-member flex-link flex-link-right" style="animation-duration: 0.9s;">
+                <p>Character Directory</p>
+            </div></a>
+        </div>
+
+    </div>
+
+    <div class="suggestions-container display-none">
+
+        <div class="suggestion-text-div" id="sugg">
+            <textarea placeholder="Please send suggestions here~!">
+
+            </textarea>
+        </div>
+        <div class="animation-white display-none">
+
+        </div>
+
+        <img src="res/shredder.png" class="shredder">
+        <div class="flex-member flex-link" style="max-width: 7vw; max-height: 4vh; margin-top: 0;" onclick="sendSuggestion()"><p style="margin:0">Send!</p></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
