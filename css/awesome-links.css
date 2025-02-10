@@ -9,7 +9,7 @@ a
 }
 a:hover
 {
-    color:#b5f19c;
+    color:#eef0ed;
 }
 a::before 
 {
@@ -20,7 +20,7 @@ a::before
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #b5f19c;
+    background-color: #eef0ed;
     transform-origin: left;
     transform: scaleX(0);
     transition: transform 0.3s ease;

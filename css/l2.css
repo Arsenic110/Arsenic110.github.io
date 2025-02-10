@@ -1,7 +1,13 @@
+@font-face 
+{
+    font-family: Coda;
+    src: url("../res/Coda-Regular.ttf");
+}
+
 :root
 {
     /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Verdana, sans-serif; */
-    font-family: 'Inconsolata', consolas;
+    font-family: Coda, 'Inconsolata', consolas;
     font-size: 1rem;
     background-color:#1c1c1c;
     color:#fcfbf6;
@@ -192,4 +198,16 @@ footer
     width: 100%;
     margin-top: auto;
     color: #8a8a8a;
+}
+
+.info-link
+{
+    box-sizing: content-box;
+    transition: all 0.2s;
+}
+
+.info-link:hover
+{
+    filter: brightness(150%);
+    border-left: 0.5rem solid #ffffff71;
 }
