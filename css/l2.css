@@ -1,13 +1,13 @@
 @font-face 
 {
-    font-family: Coda;
-    src: url("../res/Coda-Regular.ttf");
+    font-family: UbuntuMono;
+    src: url("../res/UbuntuMono-Regular.ttf");
 }
 
 :root
 {
     /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Verdana, sans-serif; */
-    font-family: Coda, 'Inconsolata', consolas;
+    font-family: UbuntuMono, 'Inconsolata', consolas;
     font-size: 1rem;
     background-color:#1c1c1c;
     color:#fcfbf6;
@@ -20,6 +20,18 @@
     background-image: radial-gradient(#373737 2px, transparent 0);
     background-size: 40px 40px;
 }
+
+@media only screen and (max-width: 800px)
+{
+    :root
+    {
+        background-color:#474747;
+        background-image: initial;
+
+        transition: all 0.5s ease;
+    }
+}
+
 
 p
 {
@@ -43,6 +55,8 @@ p
 
     overflow: clip;
 }
+
+
 
 .flex-container
 {
@@ -137,8 +151,7 @@ p
 .navbar p
 {
     background: linear-gradient(270deg, rgb(148, 1, 253) 0%, rgba(2,123,255,1) 100%);
-    padding: 2px 3px;
-    padding-top: 0;
+    padding: 0.2rem;
     margin: 0;
 }
 
@@ -209,5 +222,5 @@ footer
 .info-link:hover
 {
     filter: brightness(150%);
-    border-left: 0.5rem solid #ffffff71;
+    border-left: 0.5rem solid #eef0ed;
 }
