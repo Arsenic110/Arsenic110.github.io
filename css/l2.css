@@ -104,6 +104,26 @@ p
 {
     background: linear-gradient(270deg, rgb(148, 1, 253) 0%, rgba(2,123,255,1) 100%);
 }
+.gradient-background-2
+{
+    background: linear-gradient(270deg, rgb(85, 253, 1) 0%, rgba(2,123,255,1) 100%);
+}
+.gradient-background-3
+{
+    background: linear-gradient(270deg, rgb(253, 228, 1) 0%, rgba(2,123,255,1) 100%);
+}
+.gradient-background-devlog
+{
+    background: linear-gradient(270deg, rgb(253, 228, 1) 0%, rgba(2,123,255,1) 100%);
+}
+.gradient-background-lab
+{
+    background: linear-gradient(270deg, rgb(85, 253, 1) 0%, rgba(2,123,255,1) 100%);
+}
+.gradient-background-weekly
+{
+    background: linear-gradient(270deg, rgb(148, 1, 253) 0%, rgba(2,123,255,1) 100%);
+}
 
 .text-card
 {
@@ -223,4 +243,21 @@ footer
 {
     filter: brightness(150%);
     border-left: 0.5rem solid #eef0ed;
+}
+
+.container-img
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.container-img div
+{
+    text-align: center;
+}
+
+.img-description
+{
+    color: #b4b4b4;
+    margin-left: auto;
 }
