@@ -1,0 +1,26 @@
+06RES:
+    https://p2949.users.skynet.ie/GameDev/weekTwo.html
+    https://shaypower.org/
+
+
+2025-02-28
+During this meeting we discussed the merits and extent of our use of procedural generation in this game. Specifically the options laid out were regarding auto generation of the entire map, or to use pre-made prefabs for certain rooms and then pick and place via a somewhat complex system. We decided on the latter to allow us greater control over the map rooms, but since its a rouge like we also want random generation so each playthrough is unique in some capacity. Leo is a fan of procedural generation and so I have assigned it to him to work on.
+2025-03-06
+This was an art-team-only meeting during a Gavin lab. Not that we didn't let dev team attend, they were just unable to due to time constraints and events. Instead, for this meeting, I focused mostly on updating my dev diary and doing some sprite work on the side. I am working on a shark enemy. While I am the producer, I can also draw on the side a little bit so I do to help out. Towards the end of the meeting, I also helped out anyone with dev work on their website / dev diary. I was a web developer in my past incarnation, and it seems this curse followed me through my lives. Specifically trying to get other members to integrate Javascript into their website, because it adds some pretty nice options for dynamic content.
+2025-03-13
+This week we had mid term exams and the team had no time to work on the game, myself included as I was studying.
+2025-03-20
+Game Dev Lab X
+2025-03-27
+Game Dev Lab Y
+We got Leo joining this meeting. This turned out to be quite fortunate as we got to discuss a lot of material regarding the specifics of his implementation of random world generation. If you recall, in entry 2025-02-28, I mentioned how Leo was assigned this task - this was subtle and ingenious foreshadowing on my part. Because Leo has not been joining our meetings too often, he wasn't very familiar with the changes in our codebase - we needed to spend a fair bit of time getting him re-aquainted with it. I have asked Piraker for help with this, considering they have the best knowledge of Godot itself which is really important in this specific case. Leo's tasks involves a lot of interfacing with the game engine, something you yourself pointed out to us during the lab - so the more help he can get, the faster we will hit our target to complete this milestone. We need to stay constantly conscious of the time pressure we have, and while we are on track, we cannot allow ourselves to to slip and fall behind. I'm not trying to hurry my team, rather just intending to have everyone keep pace together.
+2025-04-03
+Game Dev Lab Z
+We have approximately 13 work days remaining to complete our game. This is a time contraint, but we are right on track to complete it. We have a completed story, and are writing the dialog now. The weapon system is fixed and can handle multiple weapons (laser, harpoon, etc). Cave tileset is completely finished, coral tileset is about 70% done. Facility tileset is also underway. We are missing some prop sprites here and there, small stuff like sea shells and tables. We could use a larger variety of enemy types, but the currently implemented ones will work for an alpha.
+
+Producer tasks ahead include the preparation of supporting materials:
+- 6 marketing screenshots
+- 30 second promotional trailer / video
+
+It's important to note that each member in my team will have to include these in their dev diaries.
+The game must also feature a UL CGD logo, we're going to put it on the menu screen, with the subscript "This game was developed by Students at the University of Limerick". 

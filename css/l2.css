@@ -110,11 +110,11 @@ p
 }
 .gradient-background-3
 {
-    background: linear-gradient(270deg, rgb(253, 228, 1) 0%, rgba(2,123,255,1) 100%);
+    background: linear-gradient(270deg, rgb(253, 177, 1) 0%, rgba(2,123,255,1) 100%);
 }
 .gradient-background-devlog
 {
-    background: linear-gradient(270deg, rgb(253, 228, 1) 0%, rgba(2,123,255,1) 100%);
+    background: linear-gradient(270deg, rgb(253, 177, 1) 0%, rgba(2,123,255,1) 100%);
 }
 .gradient-background-lab
 {
@@ -123,6 +123,10 @@ p
 .gradient-background-weekly
 {
     background: linear-gradient(270deg, rgb(148, 1, 253) 0%, rgba(2,123,255,1) 100%);
+}
+.gradient-background-intermission
+{
+    background: linear-gradient(270deg, rgb(253, 1, 1) 0%, rgba(2,123,255,1) 100%);
 }
 
 .text-card
@@ -183,7 +187,7 @@ p
     padding-left: 1.6rem;
 }
 
-li::before
+.navbar ul li::before
 {
     content: "⛶";
     position: relative;
@@ -223,7 +227,7 @@ span.emoji
 
 .infobox p
 {
-    margin: 0;
+    margin: 1rem 0;
 }
 
 footer
