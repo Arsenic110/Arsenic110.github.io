@@ -259,6 +259,11 @@ footer
 {
     text-align: center;
 }
+.container-img div img
+{
+    text-align: center;
+    max-width: 35rem;
+}
 
 .img-description
 {
