@@ -9,10 +9,13 @@ function loadComponents() {
     components = Array.from(components);
 
     components.forEach(component => {
+
+        let preventCaching = false;
         
         //turn component id into a link
         let target = "components/" + component.id + ".html";
-        fetch(target + "?v=" + Date.now()) //changing parameter to prevent caching
+        target = preventCaching ? target + "?v=" + Date.now() : target;
+        fetch(target) //changing parameter to prevent caching
             .then(res => res.text())
             .then(html => {
                 let temp = document.createElement("div");
@@ -20,15 +23,19 @@ function loadComponents() {
 
                 //if multiple top level elements, combine into a fragment
                 let fragment = document.createDocumentFragment();
-                while (temp.firstChild) {
-                    fragment.appendChild(temp.firstChild);
-                }
+
+                Array.from(temp.childNodes).forEach(node => {
+                    if (node.nodeType === Node.ELEMENT_NODE && ["STYLE", "LINK", "META", "TITLE"].includes(node.tagName)) {
+                        document.head.appendChild(node);
+                    } 
+                    else {
+                        fragment.appendChild(node);
+                    }
+                });
 
                 component.replaceWith(fragment);
             })
             .catch(err => console.error("Error loading", target, err));
     });
 }
-
-//document.addEventListener("DOMContentLoaded", loadComponents);
 loadComponents();

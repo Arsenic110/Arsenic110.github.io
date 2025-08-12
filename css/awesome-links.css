@@ -1,18 +1,17 @@
 /*
 Awesome Links - by Arsenicu
 */
-a
-{
+a {
     position: relative;
     text-decoration: none;
     color:inherit;
 }
-a:hover
-{
-    color:#eef0ed;
+
+a:hover {
+    color:inherit;
 }
-a::before 
-{
+
+a::before {
     content: "";
     position: absolute;
     display: block;
@@ -20,12 +19,16 @@ a::before
     height: 0.15rem;
     bottom: 0;
     left: 0;
-    background-color: #eef0ed;
+    background-color: currentColor;
     transform-origin: left;
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
-a:hover::before 
-{
+
+a:hover::before {
     transform: scaleX(1);
+}
+
+a.no-awesome::before {
+    content: none;
 }

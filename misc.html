@@ -3,15 +3,10 @@
 <head>
     <link rel="stylesheet" href="css/l2.css">
     <link rel="stylesheet" href="css/awesome-links.css">
-    <title>Arsen.icu - Misc</title>
 
-    <meta property="og:title" content="Arsen.icu" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://arsen.icu" />
-    <meta property="og:image" content="https://arsen.icu/res/pfp.png" />
+    <title>arsen.icu - misc</title>
 
-    <meta property="og:description" content="Arsenicu's website" />
-    <meta name="theme-color" content="#00CCFF">
+    <div class="component" id="meta"></div>
 </head>
 <body>
     <div class="container flex-container center-div">
@@ -22,18 +17,47 @@
 
             <p>this is the misc page - im going to put things here that dont fit into the other categor(y|ies)</p>
 
-            <a class="infobox info-link" href="res/dev-journal.zip">
-                <div class="gradient-background-weekly text-card">
-                    <span>Dev Diary Archive</span>
+            <div class="infobox flex-container">
+                <div class="flex-member">
+                    <div class="gradient-background-weekly text-card">
+                        <span>dev diary archive</span>
+                    </div>
+                    <p>zipped archive of my gamedev project.</p>
                 </div>
-                <p>Zipped archive of my gamedev project.</p>
-            </a>
+                <div class="flex-member">
+                    <a href="res/dev-work/dev-journal.zip" class="no-awesome infobox info-link gradient-background-2" style="display: inline-block;">
+                        <span class="emoji">💾</span>
+                        download</a>
+                </div>
+            </div>
+
+            <div class="infobox flex-container">
+                <div class="flex-member">
+                    <div class="gradient-background-weekly text-card">
+                        <span>awesome-links</span>
+                    </div>
+                    <p>
+                        css for my awesome-links stylesheet. <br>
+                        they look like <a style="color:rgb(0, 162, 255);">this</a>.
+                    </p>
+                </div>
+                <div class="flex-member">
+                    <a href="css/awesome-links.css" class="no-awesome infobox info-link gradient-background-2" style="display: inline-block;">
+                        <span class="emoji">📚</span>
+                        go to stylesheet
+                    </a> <br>
+                    <a aria-copy="https://arsen.icu/css/awesome-links.css" class="no-awesome infobox info-link gradient-background" style="display: inline-block;">
+                        <span class="emoji">🔗</span>
+                        copy link
+                    </a>
+                </div>
+            </div>
 
             <footer>2025 by Arsenicu</footer>
         </div>
     </div>
 
-    <script src="js/app.js"></script>
     <script src="js/loader.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

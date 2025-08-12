@@ -1,7 +1,7 @@
 @font-face 
 {
     font-family: UbuntuMono;
-    src: url("../res/UbuntuMono-Regular.ttf");
+    src: url("../res/fonts/UbuntuMono-Regular.ttf");
 }
 
 :root
@@ -232,6 +232,8 @@ span.emoji
     border-left: 0.2rem solid #ffffff71;
 
     margin-bottom: 0.5rem;
+
+    border-radius: 1rem;
 }
 
 .infobox p
