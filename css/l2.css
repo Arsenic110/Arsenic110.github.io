@@ -4,10 +4,16 @@
     src: url("../res/fonts/UbuntuMono-Regular.ttf");
 }
 
+@font-face
+{
+    font-family: Uiua;
+    src: url("../res/fonts/Uiua386.ttf");
+}
+
 :root
 {
     /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Verdana, sans-serif; */
-    font-family: UbuntuMono, 'Inconsolata', consolas;
+    font-family: Uiua, UbuntuMono, 'Inconsolata', consolas;
     font-size: 1.3rem;
     background-color:#1c1c1c;
     color:#fcfbf6;
